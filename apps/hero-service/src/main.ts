@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { AppModule } from './gprc.module';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 
@@ -10,13 +10,13 @@ async function bootstrap() {
       transport: Transport.GRPC,
       options: {
         package: 'hero',
-        protoPath: join(__dirname, 'hero/hero.proto'),
+        protoPath: join(__dirname, '../../proto/hero.proto'),
       },
     },
   );
 
-  await app.listen(); // 포트 번호 없이 호출
-  console.log('gRPC microservice is running...');
+  await app.listen();
+  console.log('Hero gRPC Microservice is running...');
 }
 
 bootstrap();
