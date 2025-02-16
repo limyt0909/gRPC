@@ -5,6 +5,7 @@
     "rootDir": "./",
     "module": "CommonJS"
   },
+
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

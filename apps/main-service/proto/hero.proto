@@ -4,7 +4,7 @@ syntax = "proto3";
 
 package hero;
 
-service HeroesService {
+service HeroService {
   rpc FindOne (HeroById) returns (Hero) {}
 }
 
